@@ -43,8 +43,46 @@ Antes de comenzar, asegúrate de tener instalados los siguientes programas y her
 
 Puedes probar la API desde **Postman** o **Thunder Client**. El servidor estará corriendo en el **puerto 3001**.
 
+# API Endpoints
+## Obtener todos los hábitos (Ejemplo)
+### Request
+```http
+GET /habits 
+Host: localhost:3001
+```
+
+## Crear un hábito (Ejemplo)
+### Request
+```http
+POST /habits 
+Host: localhost:3001
+Content-Type: application/json
+
+{
+  "name": "Meditar",
+  "description": "Meditar durante 20 minutos cada día"
+}
+```
+## Eliminar un hábito (Ejemplo)
+### Request
+```http
+DELETE /habits/60c72b2f9b1d8e001c8e4b8c
+Host: localhost:3001
+```
+## Actualizar un hábito (Ejemplo)
+### Request
+```http
+PUT /habits/60c72b2f9b1d8e001c8e4b8c
+Host: localhost:3001
+Content-Type: application/json
+
+{
+  "name": "Meditar",
+  "description": "Meditar durante 30 minutos cada día"
+}
+```
 ## Datos del autor
 
 - **Nombre**: Fernando Sic  
 - **Correo electrónico**: fernando.sic@galileo.edu  
-- **Carnet**: 24000480  
+- **Carnet**: 24000480 
