@@ -41,5 +41,17 @@ router.delete('/habits/:id', async (req, res) => {
     res.status(500).json({ message: 'Error deleting habit' });
   }
 });
-
+//Ruta para actualizar un hábito
+router.put('/habits/:id', async (req, res) => {
+  try {
+    const habit = await Habit.findByIdAndUpdate
+    (req.params.id, req.body, { new: true });
+    if (!habit) res.status(404).json({ message: 'Habit not found' });
+    res.json(habit);
+  }
+  catch (error) {
+    res.status(500).json({ message: 'Error updating habit' });
+  }
+}
+);
 module.exports = router;
