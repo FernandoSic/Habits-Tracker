@@ -23,12 +23,12 @@ Antes de comenzar, asegúrate de tener instalados los siguientes programas y her
 
 1. **Clonar el repositorio**  
    ```sh
-   git clone https://github.com/FernandoSic/Habits-Tracker-Backend.git
+   git clone https://github.com/FernandoSic/Habits-Tracker.git
    ```
 
 2. **Navegar a la dirección del proyecto**  
    ```sh
-   cd Habits-Tracker-Backend
+   cd Habits-Tracker
    ```
 
 3. **Instalar las dependencias**  
