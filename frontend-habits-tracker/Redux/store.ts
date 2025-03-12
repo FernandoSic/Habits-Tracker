@@ -12,3 +12,4 @@ export const makeStore = () => {
 export type AppStore = ReturnType<typeof makeStore>; //Aseguar que store este creada correctamente
 export type AppState = ReturnType<AppStore["getState"]>; //Manejar el estado de la store
 export type AppDispatch = AppStore["dispatch"]; //Manejar las acciones de la store
+export type RootState = ReturnType<AppStore["getState"]>; //Manejar el estado de la store

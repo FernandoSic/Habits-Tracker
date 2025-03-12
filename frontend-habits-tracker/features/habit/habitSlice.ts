@@ -1,4 +1,5 @@
-import { createSlice } from "@reduxjs/toolkit"; //Importar createSlice de redux toolkit
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"; //Importar createSlice de redux toolkit
+import {fetchHabits} from "./habitAPI"; //Importar fetchHabits de habitAPI
 
 type Habit = {
     id: string;
@@ -15,6 +16,11 @@ const initialState: HabitState = {
     habits: [],
 }; //Definir el estado inicial
 
+export const fetchHabitsThunk = createAsyncThunk("habit/fetchHabits", async () => {
+    return await fetchHabits();
+}); //Crear el thunk fetchHabitsThunk
+
+
 const habitSlice = createSlice({
     name: "habit",
     initialState,
@@ -28,6 +34,11 @@ const habitSlice = createSlice({
         removeHabit: (state, action) => {
             state.habits = state.habits.filter((habit) => habit.id !== action.payload);
         },
+    },
+    extraReducers: (builder) => {
+        builder.addCase(fetchHabitsThunk.fulfilled, (state, action) => {
+            state.habits = action.payload;
+        }); //Agregar el caso fetchHabitsThunk.fulfilled al reducer de habitSlice
     },
 }); //Crear el slice de habit con las acciones addHabits, addHabit y removeHabit
 
