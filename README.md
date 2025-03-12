@@ -1,4 +1,4 @@
-# Habits-Tracker-Backend
+# Habits-Tracker
 
 ## Descripción
 
@@ -19,7 +19,7 @@ Antes de comenzar, asegúrate de tener instalados los siguientes programas y her
    ```
 3. **MongoDB Atlas**: Asegúrate de tener acceso a la base de datos en la nube y configurar la conexión adecuadamente.
 
-## Pasos para su ejecución
+## Pasos para su ejecución del Backend
 
 1. **Clonar el repositorio**  
    ```sh
@@ -30,57 +30,50 @@ Antes de comenzar, asegúrate de tener instalados los siguientes programas y her
    ```sh
    cd Habits-Tracker
    ```
-
-3. **Instalar las dependencias**  
+3. **Navegar a la dirección del Backend del proyecto** 
+   ```sh
+   cd Backend
+   ```
+4. **Instalar las dependencias**  
    ```sh
    npm install
    ```
 
-4. **Iniciar el servidor**  
+5. **Iniciar el servidor**  
    ```sh
    npm start
    ```
 
 Puedes probar la API desde **Postman** o **Thunder Client**. El servidor estará corriendo en el **puerto 3001**.
 
-# API Endpoints
-## Obtener todos los hábitos (Ejemplo)
-### Request
-```http
-GET /habits 
-Host: localhost:3001
-```
+## Pasos para su ejecución del Frontend
 
-## Crear un hábito (Ejemplo)
-### Request
-```http
-POST /habits 
-Host: localhost:3001
-Content-Type: application/json
+1. **Clonar el repositorio (esto si aún no lo haz hecho)**  
+   ```sh
+   git clone https://github.com/FernandoSic/Habits-Tracker.git
+   ```
 
-{
-  "name": "Meditar",
-  "description": "Meditar durante 20 minutos cada día"
-}
-```
-## Eliminar un hábito (Ejemplo)
-### Request
-```http
-DELETE /habits/60c72b2f9b1d8e001c8e4b8c
-Host: localhost:3001
-```
-## Actualizar un hábito (Ejemplo)
-### Request
-```http
-PUT /habits/60c72b2f9b1d8e001c8e4b8c
-Host: localhost:3001
-Content-Type: application/json
+2. **Navegar a la dirección del proyecto**  
+   ```sh
+   cd Habits-Tracker
+   ```
+3. **Navegar a la dirección del Backend del proyecto** 
+   ```sh
+   cd frontend-habits-tracker
+   ```
+4. **Instalar las dependencias**  
+   ```sh
+   npm install
+   ```
 
-{
-  "name": "Meditar",
-  "description": "Meditar durante 30 minutos cada día"
-}
-```
+5. **Iniciar el servidor**  
+   ```sh
+   npm run dev
+   ```
+6. **Abrir el proyecto desde el navegador**
+
+   Ingresa desde un navegador a: http://localhost:3000 
+
 ## Datos del autor
 
 - **Nombre**: Fernando Sic  
