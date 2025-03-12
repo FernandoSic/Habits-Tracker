@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://d1o422jskmy5yw.cloudfront.net/wp-content/uploads/2017/06/galileo.png" alt="Banner del proyecto" width="100%">
+</p>
+
 # Habits-Tracker
 
 ## Descripción
@@ -48,7 +52,9 @@ Puedes probar la API desde **Postman** o **Thunder Client**. El servidor estará
 
 ## Pasos para su ejecución del Frontend
 
-1. **Clonar el repositorio (esto si aún no lo haz hecho)**  
+1. **Clonar el repositorio**
+   > ⚠️ **Precaución:** Si ya clonaste el repositorio para ejecutar el Backend, **NO DEBES CLONARLO OTRA VEZ**
+
    ```sh
    git clone https://github.com/FernandoSic/Habits-Tracker.git
    ```
@@ -70,10 +76,10 @@ Puedes probar la API desde **Postman** o **Thunder Client**. El servidor estará
    ```sh
    npm run dev
    ```
-6. **Abrir el proyecto desde el navegador**
-
-   Ingresa desde un navegador a: http://localhost:3000 
-
+6. **Abre un navegador web y visita la siguiente dirección**
+   ```
+   http://localhost:3000 
+   ```
 ## Datos del autor
 
 - **Nombre**: Fernando Sic  
