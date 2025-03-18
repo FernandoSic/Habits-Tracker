@@ -4,7 +4,7 @@ import habitReducer from "../features/habit/habitSlice"; //Importar el reducer d
 export const makeStore = () => {
     return configureStore({
         reducer: {
-            habit: habitReducer,
+            habits: habitReducer,
         }, //Configurar la store con el reducer de habit
     });
 }; //Crear la store

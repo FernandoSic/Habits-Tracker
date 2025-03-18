@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"; //Importar cre
 import {fetchHabits} from "./habitAPI"; //Importar fetchHabits de habitAPI
 
 type Habit = {
-    id: string;
+    _id: string;
     title: string;
     description: string;
     createdAt: string;
@@ -32,7 +32,7 @@ const habitSlice = createSlice({
             state.habits.push(action.payload);
         },
         removeHabit: (state, action) => {
-            state.habits = state.habits.filter((habit) => habit.id !== action.payload);
+            state.habits = state.habits.filter((habit) => habit._id !== action.payload);
         },
     },
     extraReducers: (builder) => {
