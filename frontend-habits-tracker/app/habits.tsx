@@ -3,6 +3,7 @@ interface Habit {
     title: string;
     description: string;
     createdAt: string;
+    progress: number;
 }
 
 type HabitsProp = {

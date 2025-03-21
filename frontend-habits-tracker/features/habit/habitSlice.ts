@@ -6,6 +6,7 @@ type Habit = {
     title: string;
     description: string;
     createdAt: string;
+    progress: number;
 }; //Definir el tipo Habit
 
 type HabitState = {
