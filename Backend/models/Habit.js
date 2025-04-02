@@ -14,9 +14,21 @@ const HabitSchema = new mongoose.Schema({
         type: Date,
         default: Date.now
     },
-    daysCompleted: {
+    lastUpdate: {
+        type: Date,
+        default: Date.now
+    },
+    lastDone: {
+        type: Date,
+        default: Date.now
+    },
+    days: {
         type: Number,
-        default: 0
+        default: 1
+    },
+    startedAt: {
+        type: Date,
+        default: Date.now
     }
 });
 
