@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit"; //Importar configureStore de redux toolkit
 import habitReducer from "../features/habit/habitSlice"; //Importar el reducer de habit
+import userReducer from "../features/user/userSlice"; //Importar el reducer de user
 
 export const makeStore = () => {
     return configureStore({
         reducer: {
             habits: habitReducer,
+            user: userReducer
         }, //Configurar la store con el reducer de habit
     });
 }; //Crear la store

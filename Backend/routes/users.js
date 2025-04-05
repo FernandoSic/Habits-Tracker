@@ -19,7 +19,7 @@ router.post('/register', async function (req, res, next) {
     const newUser = new User({ username, password: hashedPassword}); // Crea un nuevo usuario con el nombre de usuario y la contraseña encriptada
     await newUser.save();
     
-    res.status(201).json({ message: 'User registered successfully' }); 
+    res.status(201).json({ message: 'Usuario registrado correctamente' }); 
   }catch(error){
     console.error(error); 
     res.status(500).json({error: "Error en el registro", "description":error.toString()}) // Devuelve un error 500 si ocurre un error al registrar el usuario
@@ -36,7 +36,7 @@ router.post('/login', async function (req, res, next) {
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) return res.status(400).json({error: "Contraseña incorrecta"}); 
 
-    const token = jwt.sign({id: user._id}, process.env.JWT_SECRET ,{expiresIn: '7d'});
+    const token = jwt.sign({userId: user._id}, process.env.JWT_SECRET ,{expiresIn: '7d'});
     res.cookie('habitToken', token, {
       httpOnly: false,
       secure: process.env.NODE_ENV === 'production', // Solo habilitar en producción
